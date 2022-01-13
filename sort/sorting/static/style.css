@@ -1,0 +1,35 @@
+.container{
+  /* width: 1200px; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.box {
+  /* margin: 10px 10px 10px 10px; */
+  /* width: 600px; */
+  /* display: flex; */
+  /* background-color: black; */
+  /* display: inline-grid; */
+  /* columns: ; */
+  /* float: left; */
+  /* width: 50px; */
+  background-color: #f0fdfb;
+  margin: 1rem 1rem 1rem 1rem;
+  border: 3px solid #18e7bc;
+  border-radius: 1em;
+  padding: 1rem 2rem 1rem 2rem;
+  display: block;
+  max-width: ;
+}
+.box:hover {
+  background-color: #18e7bc;
+}
+/* .box div {
+  float: left;
+  background-color: #f0fdfb;
+  margin: 1rem 1rem 1rem 1rem;
+  border: 3px solid #18e7bc;
+  border-radius: 1em;
+  padding: 1rem 2rem 1rem 2rem;
+} */

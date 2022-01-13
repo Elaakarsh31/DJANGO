@@ -1,0 +1,27 @@
+{% extends "sorting/base.html" %}
+{% load static %}
+{% block body %}
+    <h1>Selection Sort</h1>
+    <form action="" method="post">
+         {% csrf_token %}
+        <input type="text" name="list">
+        <button type="submit">submit</button>
+    </form><br>
+    {% if SortArr.0 != SortArr|last %}
+        <div class="container">
+        {% for i in SortArr %}
+            {% for j in i %}
+                    <div class="box" >{{j}}</div>
+            {% endfor %}
+        {% endfor %}
+        </div>
+    {% else %}
+        {% for i in SortArr.0 %}
+            <div class="box">
+                <h1>{{i}}</h1>
+            </div>
+        {% endfor %}
+    {% endif %}
+<!--    <div id="yo" style="width: {{len}}px">hello</div>-->
+<!--&lt;!&ndash;    <h1>{{color}}</h1>&ndash;&gt;-->
+{% endblock %}

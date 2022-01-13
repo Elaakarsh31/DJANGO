@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+{% block title %} ViewList {% endblock %}
+{% block body %}
+    <h1>{{ls.name}}</h1>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <ul>
+            {% for item in ls.item_set.all %}
+                <li><input type="checkbox", value="clicked", name="c{{item.id}}" checked>{{item.text}}</li>
+            {% endfor %}
+        </ul>
+        <button type="submit", name="save", value="save">Save</button>
+        <input type="text", name="new">
+        <button type="submit", name="newItem", value="newItem">Add Item</button>
+    </form>
+{% endblock %}
